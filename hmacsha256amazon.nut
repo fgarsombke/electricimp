@@ -45,8 +45,8 @@ function getQueryString(queryParameters){
   local queryString = "";
   local parameterCount = 0;
   foreach(queryParam in queryParameters) {
-    local parameterName = getEncodedValue(queryParam.name);
-    local parameterValue = getEncodedValue(queryParam.value);
+    local parameterName = queryParam.name;
+    local parameterValue = queryParam.value;
     queryString += parameterName + "=" + parameterValue;
     if (parameterCount < queryParameters.len() - 1) {
       queryString += "&";
